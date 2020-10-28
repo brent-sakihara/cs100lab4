@@ -9,6 +9,7 @@ ADD_EXECUTABLE(test
 	mult.cpp
 	div.cpp
 	add.cpp
+	sub.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
