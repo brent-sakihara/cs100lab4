@@ -1,5 +1,5 @@
 
-#include "mult.hpp"
+#include "arithmetic_operations.hpp"
 #include "base.hpp"
 
 double Mult::evaluate() {

@@ -7,7 +7,7 @@
 #include "pow_mock.hpp"
 #include "rand_mock.hpp"
 #include "add_mock.hpp"
-#include "mult.hpp"
+#include "arithmetic_operations.hpp"
 
 //MultTests
 
