@@ -28,5 +28,17 @@ class Div : public Base {
 };
 
 
+class Add : public Base {
+    public:
+	Add (Base* leftN, Base* rightN) : Base() {left = leftN, right = rightN; }
+        virtual double evaluate();
+        virtual std::string stringify();
+
+    private:
+	Base* left;
+	Base* right;
+};
+
+
 #endif
 
