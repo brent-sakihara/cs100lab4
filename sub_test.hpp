@@ -49,28 +49,28 @@ TEST(SubTest, SubStringifyPosAndPos) {
         FiveOpMock* val1 = new FiveOpMock();
         FiveOpMock* val2 = new FiveOpMock();
         Sub* difference = new Sub(val1, val2);
-        EXPECT_EQ(difference->stringify(), "(5.2 - 5.2)");
+        EXPECT_EQ(difference->stringify(), "(5.200000 - 5.200000)");
 }
 
 TEST(SubTest, SubStringifyPosAndNeg) {
         FiveOpMock* val1 = new FiveOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Sub* difference = new Sub(val1, val2);
-        EXPECT_EQ(difference->stringify(), "(5.2 - -3.6)");
+        EXPECT_EQ(difference->stringify(), "(5.200000 - -3.600000)");
 }
 
 TEST(SubTest, SubStringifyNegAndNeg) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Sub* difference = new Sub(val1, val2);
-        EXPECT_EQ(difference->stringify(), "(-3.6 - -3.6)");
+        EXPECT_EQ(difference->stringify(), "(-3.600000 - -3.600000)");
 }
 
 TEST(SubTest, SubStringifyNegAndZero) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         ZeroOpMock* val2 = new ZeroOpMock();
         Sub* difference = new Sub(val1, val2);
-        EXPECT_EQ(difference->stringify(), "(-3.6 - 0)");
+        EXPECT_EQ(difference->stringify(), "(-3.600000 - 0.000000)");
 }
 
 TEST(SubTest, SubStringifyMultAndDiv) {
@@ -81,7 +81,7 @@ TEST(SubTest, SubStringifyMultAndDiv) {
 	FiveOpMock* val5 = new FiveOpMock();
 	Div* val6 = new Div(val4, val5);
         Sub* difference = new Sub(val3, val6);
-        EXPECT_EQ(difference->stringify(), "((5.2 * 5.2) - (-3.6 / 5.2))");
+        EXPECT_EQ(difference->stringify(), "((5.200000 * 5.200000) - (-3.600000 / 5.200000))");
 }
 
 #endif

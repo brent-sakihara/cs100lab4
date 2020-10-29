@@ -8,7 +8,7 @@ class OneSubMock : public Base {
         OneSubMock() : Base() { }
 
 	virtual double evaluate() { return 1.5; }
-	virtual std::string stringify() { return "(3.0 - 1.5)"; }
+	virtual std::string stringify() { return "(3.000000 - 1.500000)"; }
 }
 
 class NegThreeSubMock : public Base {
@@ -16,7 +16,7 @@ class NegThreeSubMock : public Base {
         NegThreeSubMock() : Base() { }
 
         virtual double evaluate() { return -3.5; }
-        virtual std::string stringify() { return "(-1.8 - 1.7)"; }
+        virtual std::string stringify() { return "(-1.800000 - 1.700000)"; }
 
 }
 
@@ -25,7 +25,7 @@ class ZeroSubMock : public Base {
         ZeroSubMock() : Base() { }
 
         virtual double evaluate() { return 0.0; }
-        virtual std::string stringify { return "(3.0 - 3.0)"; }
+        virtual std::string stringify { return "(3.000000 - 3.000000)"; }
 }
 
 #endif

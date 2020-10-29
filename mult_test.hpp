@@ -7,7 +7,7 @@
 #include "pow_mock.hpp"
 #include "rand_mock.hpp"
 #include "add_mock.hpp"
-#include "mult.hpp"
+#include "arithmetic_operations.hpp"
 
 //MultTests
 
@@ -50,35 +50,35 @@ TEST(MultTest, MultStringifyPosAndPos) {
 	FiveOpMock* val1 = new FiveOpMock();
 	FiveOpMock* val2 = new FiveOpMock();
 	Mult* product = new Mult(val1, val2);
-	EXPECT_EQ(product->stringify(), "(5.2 * 5.2)");
+	EXPECT_EQ(product->stringify(), "(5.200000 * 5.200000)");
 }
 
 TEST(MultTest, MultStringifyPosAndNeg) {
         FiveOpMock* val1 = new FiveOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Mult* product = new Mult(val1, val2);
-        EXPECT_EQ(product->stringify(), "(5.2 * -3.6)");
+        EXPECT_EQ(product->stringify(), "(5.200000 * -3.600000)");
 }
 
 TEST(MultTest, MultStringifyNegAndNeg) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Mult* product = new Mult(val1, val2);
-        EXPECT_EQ(product->stringify(), "(-3.6 * -3.6)");
+        EXPECT_EQ(product->stringify(), "(-3.600000 * -3.600000)");
 }
 
 TEST(MultTest, MultStringifyZeroAndNeg) {
         ZeroOpMock* val1 = new ZeroOpMock();
 	NegThreeOpMock* val2 = new NegThreeOpMock();
         Mult* product = new Mult(val1, val2);
-        EXPECT_EQ(product->stringify(), "(0 * -3.6)");
+        EXPECT_EQ(product->stringify(), "(0.000000 * -3.600000)");
 }
 
 TEST(MultTest, MultStringifyAddAndNeg) {
         NegSixAddMock* val1 = new NegSixAddMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Mult* product = new Mult(val1, val2);
-        EXPECT_EQ(product->stringify(), "((-3.5 + -3) * -3.6)");
+        EXPECT_EQ(product->stringify(), "((-3.500000 + -3.000000) * -3.600000)");
 }
 
 
