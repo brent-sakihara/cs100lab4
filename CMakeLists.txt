@@ -16,5 +16,16 @@ ADD_EXECUTABLE(lab
 	sub.cpp
 )
 
-TARGET_LINK_LIBRARIES(lab gtest)
-TARGET_COMPILE_DEFINITIONS(lab PRIVATE gtest_disable_pthreads=ON)
+ADD_EXECUTABLE(test
+	unit_test.cpp
+	op.cpp
+	rand.cpp
+	pow.cpp
+	mult.cpp
+	div.cpp
+	add.cpp
+	sub.cpp
+)
+
+TARGET_LINK_LIBRARIES(test  gtest)
+TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
