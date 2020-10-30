@@ -27,6 +27,7 @@ class NegativeFiveOpMock: public Base {
         double evaluate() { return -5; }
         std::string stringify() { return "-5.000000"; }
 };
+
 class NegativeSixteenPointFour: public Base {
     public:
 	NegativeSixteenPointFour(): Base() { };
@@ -67,7 +68,7 @@ class NegativeTwentyOneRandMock : public Base {
 //Pow class mocks
 class FourPowTwoMock : public Base {
      public:
-	FourPowTwoMock() : Base() { kds};
+	FourPowTwoMock() : Base() { };
 	double evaluate() { return 16.000000; }
 	std:: string stringify() { return "(4.000000 ** 2.000000)"; }
 };
@@ -146,7 +147,6 @@ class EightPointSevenMultSixPointOneMock : public Base {
 };
 
 
-
 //Div class mocks
 class FourDivTwoMock : public Base {
      public:
@@ -191,7 +191,6 @@ class ZeroDivOneMock : public Base {
 };
 
 
-
 //Add class mocks
 class TwoAddTwoMock : public Base {
      public:
@@ -234,7 +233,6 @@ class ZeroAddZeroMock : public Base {
         double evaluate() {return 0;}
         std::string stringify() {return "0.000000 + 0.000000";}
 };
-
 
 
 //Sub class mocks
