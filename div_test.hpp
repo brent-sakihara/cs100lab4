@@ -50,35 +50,35 @@ TEST(DivTest, DivStringifyPosAndPos) {
         FiveOpMock* val1 = new FiveOpMock();
         FiveOpMock* val2 = new FiveOpMock();
         Div* quotient = new Div(val1, val2);
-        EXPECT_EQ(quotient->stringify(), "(5.2 / 5.2)");
+        EXPECT_EQ(quotient->stringify(), "(5.200000 / 5.200000)");
 }                              
 
 TEST(DivTest, DivStringifyPosAndNeg) {
         FiveOpMock* val1 = new FiveOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Div* quotient = new Div(val1, val2);
-        EXPECT_EQ(quotient->stringify(), "(5.2 / -3.6)");
+        EXPECT_EQ(quotient->stringify(), "(5.200000 / -3.600000)");
 }
 
 TEST(DivTest, DivStringifyNegAndNeg) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Div* quotient = new Div(val1, val2);
-        EXPECT_EQ(quotient->stringify(), "(-3.6 / -3.6)");
+        EXPECT_EQ(quotient->stringify(), "(-3.600000 / -3.600000)");
 }
 
 TEST(DivTest, DivStringifyPosAndZero) {
         FiveOpMock* val1 = new FiveOpMock();
         ZeroOpMock* val2 = new ZeroOpMock();
         Div* quotient = new Div(val1, val2);
-        EXPECT_EQ(quotient->stringify(), "(5.2 / 0)");
+        EXPECT_EQ(quotient->stringify(), "(5.200000 / 0.000000)");
 }
 
 TEST(DivTest, DivStringifyPosAndPow) {
         FiveOpMock* val1 = new FiveOpMock();
         NegOnePowMock* val2 = new NegOnePowMock();
         Div* quotient = new Div(val1, val2);
-        EXPECT_EQ(quotient->stringify(), "(5.2 / (-1 ** 3))");
+        EXPECT_EQ(quotient->stringify(), "(5.200000 / (-1.000000 ** 3.000000))");
 }
 
 #endif

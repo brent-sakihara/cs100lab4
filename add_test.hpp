@@ -47,28 +47,28 @@ TEST(AddTest, AddStringifyPosAndPos) {
         FiveOpMock* val1 = new FiveOpMock();
         FiveOpMock* val2 = new FiveOpMock();
         Add* sum = new Add(val1, val2);
-        EXPECT_EQ(sum->stringify(), "(5.2 + 5.2)");
+        EXPECT_EQ(sum->stringify(), "(5.200000 + 5.200000)");
 }
 
 TEST(AddTest, AddStringifyPosAndNeg) {
         FiveOpMock* val1 = new FiveOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Add* sum = new Add(val1, val2);
-        EXPECT_EQ(sum->stringify(), "(5.2 + -3.6)");
+        EXPECT_EQ(sum->stringify(), "(5.200000 + -3.600000)");
 }
 
 TEST(AddTest, AddStringifyNegAndNeg) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         NegThreeOpMock* val2 = new NegThreeOpMock();
         Add* sum = new Add(val1, val2);
-        EXPECT_EQ(sum->stringify(), "(-3.6 + -3.6)");
+        EXPECT_EQ(sum->stringify(), "(-3.600000 + -3.600000)");
 }
 
 TEST(AddTest, AddStringifyNegAndZero) {
         NegThreeOpMock* val1 = new NegThreeOpMock();
         ZeroOpMock* val2 = new ZeroOpMock();
         Add* sum = new Add(val1, val2);
-        EXPECT_EQ(sum->stringify(), "(-3.6 + 0)");
+        EXPECT_EQ(sum->stringify(), "(-3.600000 + 0.000000)");
 }
 
 TEST(AddTest, AddStringifyPowAndMult) {
@@ -77,7 +77,7 @@ TEST(AddTest, AddStringifyPowAndMult) {
 	NegThreeOpMock* val3 = new NegThreeOpMock();
 	Mult* val4 = new Mult(val2, val3);
         Add* sum = new Add(val1, val4);
-        EXPECT_EQ(sum->stringify(), "((2 ** 3) + (5.2 * -3.6))");
+        EXPECT_EQ(sum->stringify(), "((2.000000 ** 3.000000) + (5.200000 * -3.600000))");
 }
 
 
