@@ -18,7 +18,7 @@ class NegThreeSubMock : public Base {
         virtual double evaluate() { return -3.5; }
         virtual std::string stringify() { return "(-1.800000 - 1.700000)"; }
 
-}
+};
 
 class ZeroSubMock : public Base {
     public:
@@ -26,7 +26,7 @@ class ZeroSubMock : public Base {
 
         virtual double evaluate() { return 0.0; }
         virtual std::string stringify { return "(3.000000 - 3.000000)"; }
-}
+};
 
 #endif
 
