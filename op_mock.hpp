@@ -16,12 +16,12 @@ class NegThreeOpMock : public Base {
 	virtual double evaluate() { return -3.6; }
 	virtual std::string stringify() { return "-3.600000"; }
 };
-
+/*
 class ZeroOpMock : public Base {
     public:
-	ZeroOpMock() : Base() { }
+    	ZeroOpMock() : Base() { }
 	virtual double evaluate() { return 0; }
 	virtual std::string stringify() { return "0.000000"; }
 };
-
+*/
 #endif //__OP_Mock_HPP__

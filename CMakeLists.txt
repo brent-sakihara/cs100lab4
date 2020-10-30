@@ -6,7 +6,7 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(lab
-	unit_test.cpp
+	main.cpp
 	op.cpp
 	rand.cpp
 	pow.cpp
@@ -16,5 +16,5 @@ ADD_EXECUTABLE(lab
 	sub.cpp
 )
 
-TARGET_LINK_LIBRARIES(test gtest)
-TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
+TARGET_LINK_LIBRARIES(lab gtest)
+TARGET_COMPILE_DEFINITIONS(lab PRIVATE gtest_disable_pthreads=ON)
