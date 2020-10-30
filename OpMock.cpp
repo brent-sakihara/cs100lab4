@@ -35,7 +35,6 @@ class NegativeSixteenPointFour: public Base {
 	std::string stringify() { return "-16.500000"; }
 };
 
-
 //Rand class mocks
 class EightRandMock : public Base {
      public:
